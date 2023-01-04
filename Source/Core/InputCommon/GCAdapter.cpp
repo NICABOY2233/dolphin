@@ -802,7 +802,7 @@ void ProcessInputPayload(const u8* data, std::size_t size)
         if (Common::ExtractBit<1>(b1))
           pad.button |= PAD_BUTTON_B;
         if (Common::ExtractBit<2>(b1))
-          pad.button |= PAD_BUTTON_X;
+          pad.button |= PAD_BUTTON_Z;
         if (Common::ExtractBit<3>(b1))
           pad.button |= PAD_BUTTON_Y;
 
@@ -818,11 +818,11 @@ void ProcessInputPayload(const u8* data, std::size_t size)
         if (Common::ExtractBit<0>(b2))
           pad.button |= PAD_BUTTON_START;
         if (Common::ExtractBit<1>(b2))
-          pad.button |= PAD_TRIGGER_Z;
+          pad.button |= PAD_TRIGGER_L;
         if (Common::ExtractBit<2>(b2))
           pad.button |= PAD_TRIGGER_R;
         if (Common::ExtractBit<3>(b2))
-          pad.button |= PAD_TRIGGER_L;
+          pad.button |= PAD_TRIGGER_X;
 
         pad.stickX = channel_data[3];
         pad.stickY = channel_data[4];
